@@ -1,0 +1,25 @@
+@import "../additions/vars";
+@import "../additions/mixins";
+
+//delicious
+.delicious{
+    min-height: 1000px;
+    background: #fff; /* Old browsers */
+    background: -moz-linear-gradient(90deg, darken(@grey, 10%) 0%, lighten(@grey, 20%) 50%, lighten(@grey, 50%) 55%, #fff 70%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(90deg, darken(@grey, 10%) 0%, lighten(@grey, 20%) 50%, lighten(@grey, 50%) 55%, #fff 70%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(90deg, darken(@grey, 10%) 0%, lighten(@grey, 20%) 50%, lighten(@grey, 50%) 55%, #fff 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@grey, endColorstr=#fff,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.delicious__desc-title{
+    color: @blue;
+    width: 700px;
+    .title-mixin;
+}
+.delicious__desc-body{
+    font-size: 1.3rem;
+    color: @black;
+    width: 400px;
+}
+
+
+

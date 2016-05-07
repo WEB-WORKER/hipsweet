@@ -1,0 +1,305 @@
+@import "../additions/vars";
+@import "../additions/mixins";
+
+//team
+
+.team{
+    min-height: 1445px;
+    background: #fff; /* Old browsers */
+    background: -moz-linear-gradient(lighten(@grey, 5%) 0%, #fff 30%, #fff 70%, lighten(@grey, 5%) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(lighten(@grey, 5%) 0%, #fff 30%, #fff 70%, lighten(@grey, 5%) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(lighten(@grey, 5%) 0%, #fff 30%, #fff 70%, lighten(@grey, 5%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@grey, endColorstr=#fff,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.team__inside{
+	padding-top: 180px;
+	padding-bottom: 600px;
+}
+.team__inside-head{
+	margin-bottom: 50px;
+}
+.team__title-wrap, 
+.team__tabs,
+.team__item,
+.team__link{
+	display: inline-block;
+}
+.team__title-wrap{
+	width: 300px;
+	height: 155px;
+	vertical-align: top;
+}
+.team__title{
+	font-family: @font;
+	font-weight: 100;
+	font-size: 50px;
+ 	color: @team-blue;
+}
+.team__item{
+	position: relative;
+	height: 150px;
+	width: 250px;
+	border-radius: 10px;
+	
+	vertical-align: top;
+	& > .team__link{
+		color: @team-blue;
+		& > .team__item-head .team__item-titl{
+			font-family: @font;
+			font-weight: 100;
+			font-size: 30px;
+		}
+	} 
+	&:hover{
+		background-color: lighten(@brown, 7%);
+		& > .team__link{
+		color: @orange;
+		& > .team__item-body{
+			color: #fff;
+			}
+		} 
+		&:after{
+		content:'';
+		position: absolute;
+		border-top: 11px solid lighten(@brown, 7%);
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		bottom: -12px;
+		margin: auto;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+    	-ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+		}
+	}
+}
+.team__item.active{
+	background-color: lighten(@brown, 7%);
+		& > .team__link{
+		color: @orange;
+		& > .team__item-body{
+			color: #fff;
+		}
+		position: relative;
+	} 
+	&:after{
+		content:'';
+		position: absolute;
+		border-top: 11px solid lighten(@brown, 7%);
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		bottom: -12px;
+		margin: auto;
+		left: 50%;
+		-webkit-transform: translate(-50%,-50%);
+    	-ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+	}
+}
+.team__link{
+	text-decoration: none;
+	padding: 20px 45px 20px 45px;
+	height: 100%;
+	width: 70%;
+}
+.team__item-head{
+	margin-bottom: 7px;
+}
+.team__item-body{
+	color: darken(@grey, 25%);
+}
+.team__content{
+	padding-top: 50px;
+	position: relative;
+	margin-bottom: 200px;
+	min-height: 400px;
+	&:after{
+		content: '';
+		position: absolute;
+		background: url('img/team/cav.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 40px;
+		height: 40px;
+		top: 30px;
+		left: 430px;
+	}
+}
+.team__content-first, 
+.team__content-second, 
+.team__content-third{
+	-webkit-columns: 2 320px;
+	-webkit-column-gap: 300px;
+	-moz-columns: 2 320px;
+	-moz-column-gap: 300px;
+	-o-columns: 2 320px;
+	-o-column-gap: 300px;
+	columns: 2 320px;
+	column-gap: 550px;
+
+	color: darken(@grey, 20%);
+}
+.tab{
+	& > p{
+		margin-bottom: 20px;
+	}
+	& > p > STRONG{
+		color: darken(@grey, 40%);
+	}
+}
+////////////////////////////////////
+.team__form-mainwrap{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		background: url('img/team/team__cook.png');
+		background-repeat: no-repeat;
+		width: 415px;
+		height: 604px;
+		top: -600px;
+		left: 450px;
+	}
+}
+.team__form-send{
+	position: absolute;
+	bottom: -30px;
+	right: -30px;
+	width: 100px;
+	height: 100px;
+	background-color: @orange;
+	border: none;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+	-o-transition: all .2s;
+	transition: all .2s;
+	z-index: 1;
+	outline: none;
+	&:hover{
+		background-color: @brown;
+		.team__form-send-arrow{
+		background: url('img/team/send-arrow-hover.png');
+			}
+	}
+}
+.team__form-send-arrow{
+		background: url('img/team/send-arrow.png');
+		height: 50px;
+		width: 50px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin: 0 auto;
+}
+.team__form-wrap{
+	position: absolute;
+	top: 0;
+	width: 850px;
+	height: 410px;
+	margin: 0 auto;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	margin: auto;
+	left: 50%;
+	-webkit-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+}
+.team__form{
+	background: url('img/team/bg-form.png');
+	width: 100%;
+	height: 100%;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+}
+.team__form-left{
+	float: left;
+	width: 425px;
+	height: 410px;
+}
+.team__form-title{
+	display: inline-block;
+	vertical-align:middle;
+	font-family: @font;
+	font-size: 4.8rem;
+	color: #fff;
+	font-weight: 100;
+	width: 400px;
+	text-align: center;
+}
+.team__form-title-helper,
+.team__form-inside-helper{
+	display:inline-block;
+    vertical-align:middle;
+    height:100%;
+}
+.team__form-right{
+	float: right;
+	background-color: rgba(0,0,0,0.7);
+	width: 425px;
+	max-height: 410px;
+	font-size: 16px;
+	-moz-border-radius: 0 20px 20px 0;
+	-webkit-border-radius: 0 20px 20px 0;
+	-o-border-radius: 0 20px 20px 0;
+	border-radius: 0 20px 20px 0;
+}
+
+.team__form-inside-wrap{
+	margin: 0 auto;
+	width: 300px;
+	height: 410px;
+}
+.team__form-inside{
+	display:inline-block;
+    vertical-align:middle;
+    width: 280px;
+}
+.team__form-input{
+	font-size: 1.1rem;
+	height: 50px;
+	width: 280px;
+	margin-top: 20px;
+	background-color: transparent;
+	color: #fff;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline-color: rgba(200, 200, 201, 0.5);
+}
+.team__form-phone{
+	letter-spacing: 1.5px;
+}
+.team__form-input::-webkit-input-placeholder {color:@grey;}
+.team__form-input::-moz-placeholder          {color:@grey;}/* Firefox 19+ */
+.team__form-input:-moz-placeholder           {color:@grey;}/* Firefox 18- */
+.team__form-input:-ms-input-placeholder      {color:@grey;}
+
+.team__form-check-left,
+.team__form-check-right{
+	display:inline-block;
+	vertical-align: top;
+	margin-top: 40px;
+}
+.team__form-check-left{
+	width: 10px;
+	font-size: 1.1rem;
+	padding-top: 5px;
+}
+.team__form-check-right{
+	font-size: 1.1rem;
+	color: #fff;
+	max-width: 250px;
+}
+.team__form-check{
+	display:inline-block;
+	vertical-align: top;
+	font-size: 1.1rem;
+	color: #fff;
+}

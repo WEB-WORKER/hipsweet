@@ -1,0 +1,32 @@
+//additions
+
+@import "additions/mixins.less";
+@import "additions/vars.less";
+
+//sections
+
+@import "sections/01header.less";
+@import "sections/02sweet-cupcake.less";
+@import "sections/03delicious.less";
+@import "sections/04deliver.less";
+@import "sections/05team.less";
+@import "sections/06questions.less";
+@import "sections/07map.less";
+@import "sections/08footer.less";
+
+//code
+
+html, body {
+  background-color: #fff; 
+  font-size: 16px;
+}
+.red-gradient{
+    background: @red; /* Old browsers */
+    background: -moz-linear-gradient(45deg, lighten(@lightRed, 10%) 0%, @lightRed 50%, @red 85%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, lighten(@lightRed, 10%) 0%, @lightRed 50%, @red 85%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, lighten(@lightRed, 10%) 0%, @lightRed 50%, @red 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@lightRed, endColorstr=@red,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+} 
+
+
+

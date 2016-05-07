@@ -1,0 +1,129 @@
+@import "../additions/vars";
+@import "../additions/mixins";
+
+//delicious
+
+.delicious{
+    min-height: 1000px;
+    background: #fff; /* Old browsers */
+    background: -moz-linear-gradient(90deg, @grey 0%, lighten(@grey, 17%) 30%, lighten(@grey, 17%) 50%, lighten(@grey, 18%) 70%, lighten(@grey, 18%) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(90deg, @grey 0%, lighten(@grey, 17%) 30%, lighten(@grey, 17%) 50%, lighten(@grey, 18%) 70%, lighten(@grey, 18%) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(90deg, @grey 0%, lighten(@grey, 17%) 30%, lighten(@grey, 17%) 50%, lighten(@grey, 18%) 70%, lighten(@grey, 18%) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@grey, endColorstr=#fff,GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    // padding: 230px 0 190px 80px;
+    line-height: 0;
+    font-size: 0;
+}
+
+//left
+.delicious__left{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 230px 0 190px 50px;
+    line-height: 25px;
+    width: 700px;
+    min-height: 580px;
+    margin-right: 20px;
+}
+.delicious__desc-title{
+    display: inline-block;
+    vertical-align: top;
+    color: @blue;
+    width: 700px;
+    margin-bottom: 45px;
+    .title-mixin;
+}
+.delicious__desc-body{
+    display: inline-block;
+    vertical-align: top;
+    color: @black;
+    width: 450px;
+    margin-bottom: 100px;
+    .desc-mixin;
+}
+.delicious__desc-col{
+    display: inline-block;
+    width: 33.3%;
+    height: 150px;
+}
+.delicious__desc-circle{
+    height: 107px;
+    width: 107px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: @grey-circ;
+    margin-bottom: 20px;
+    position: relative;
+}
+.delicious__desc-cook-hat{
+    &:before{
+        content: '';
+        background-image: url('img/delicious/delicious__sprite.png');
+        background-position: -55px -50px;
+        top: -10px;
+        left: -10px;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+    }
+}
+.delicious__desc-cook-leaf{
+    &:before{
+        content: '';
+        background-image: url('img/delicious/delicious__sprite.png');
+        background-position: -275px -50px;
+        top: -10px;
+        left: -33px;
+        width: 150px;
+        height: 120px;
+        // border: 1px solid #000;
+        position: absolute;
+    }
+}
+.delicious__desc-cook-heart{
+    &:before{
+        content: '';
+        background-image: url('img/delicious/delicious__sprite.png');
+        background-position: -530px -50px;
+        top: -10px;
+        left: -17px;
+        width: 140px;
+        height: 120px;
+        // border: 1px solid #000;
+        position: absolute;
+    }
+}
+.delicious__desc-min-title-wrap{
+     display: inline-block;
+    vertical-align: middle;
+    min-height: 100px;
+}
+.delicious__desc-min-title{
+    font-family: @font;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: @black;
+}
+//right
+.delicious__right{
+    display: inline-block;
+    vertical-align: bottom;
+    height: 1000px;
+    width: 470px;
+    position: relative;
+}
+.delicious__img-wrap{
+    position: absolute;
+    height: 1000px;
+    width: 500px;
+    overflow: hidden;
+}
+.delicious__img{
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+}
+
+

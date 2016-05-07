@@ -1,0 +1,331 @@
+@import "../additions/vars";
+@import "../additions/mixins";
+
+//sweet-cupcake
+
+.sweet-cupcake{
+    min-height: @sweet-cupcakeHeight;
+    padding-top: 90px;
+    padding-bottom: 200px;
+}
+.sweet-cupcake__slider-item{
+    padding: 50px 0 100px 0; 
+    font-size: 0;
+    position: relative;
+    &:before{
+        content: 'ПИРОЖИНКА';
+        position: absolute;
+        font-family: @font;
+        color: rgba(255,255,255,0.1);
+        font-size: 11rem;
+        top: 160px;
+        left: 15px;
+        z-index:0;
+    }
+}
+.sweet-cupcake__ingredients{
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+    width: 170px;
+    font-size: 0;
+    margin-top: 220px;
+}
+.sweet-cupcake__ingredients-circle{
+    height: 42px;
+    width: 42px;
+    background-color: rgba(255,255,255,0.1);
+    margin: 0 auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: relative;
+        &:before{
+        content:'';
+        position: absolute;
+        background-image: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 16px;
+        width: 42px;
+        height: 42px;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        }
+        &:hover{
+            background-color: @orange;
+            &:before{
+            content:'';
+            position: absolute;
+            background-image: url('img/sweet-cupcake__ingredients-sprite.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: -42px 0;
+            font-size: 16px;
+            width: 42px;
+            height: 42px;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            }
+    }
+}
+.sweet-cupcake__ingredients-desc{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.sweet-cupcake__ingredients-date-1{
+    opacity: 0.5;
+    font-size: 1rem;
+    text-align: center;
+}
+.sweet-cupcake__ingredients-date-2{
+    font-family: @font;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    letter-spacing: 0.6px;
+}
+//dropright
+.sweet-cupcake__ingredients .sweet-cupcake__ingredients-trigger-wrap .sweet-cupcake__ingredients-act{
+    display: none;
+}
+.sweet-cupcake__ingredients .sweet-cupcake__ingredients-trigger-wrap:hover > .sweet-cupcake__ingredients-act{
+    display: inline-block; 
+    &:after{
+                content:'';
+                position: absolute;
+                top: 0;
+                left: -80px;
+                width: 200px;
+                height: 300px;
+                background-color: transparent;
+            }  
+}
+.sweet-cupcake__ingredients-trigger-wrap{
+                position: relative;
+
+}
+.sweet-cupcake__ingredients .sweet-cupcake__ingredients-trigger-wrap:hover .sweet-cupcake__ingredients-act{
+                position: absolute;
+                left: 170px;
+                top: -80px;
+                width: 225px;
+                z-index: 1;
+                background-color: rgba(255,255,255,0.9);
+                padding: 60px 70px 30px 110px;
+                -moz-border-radius: 20px;
+                -webkit-border-radius: 20px;
+                -o-border-radius: 20px;
+                border-radius: 20px;
+}
+.sweet-cupcake__ingredients-act-items{
+    font-size: 0;
+}
+.sweet-cupcake__ingredients-triangle{
+    position: relative;
+    &:before{
+        content:'';
+        position: absolute;
+        font-size: 16px;
+        // width: 100px;
+        // height: 20px;
+        top: 18px;
+        left: -122.7px;
+        border-right:13px solid rgba(255,255,255, 0.9);
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+    }
+}
+.sweet-cupcake__ingredients-act-item-right{
+    display: inline-block;
+    color: darken(@black, 20%);
+    font-size: 1rem;
+    width: 40px;
+    margin-bottom: 30px;
+}
+.sweet-cupcake__ingredients-act-item-left-flour,
+.sweet-cupcake__ingredients-act-item-left-eggs,
+.sweet-cupcake__ingredients-act-item-left-sugar,
+.sweet-cupcake__ingredients-act-item-left-oil,
+.sweet-cupcake__ingredients-act-item-left-milk{
+    .ingredients-mixin;
+    margin-bottom: 30px;
+}
+.sweet-cupcake__ingredients-act-item-left-flour{
+    &:before{
+        content: '';
+        position: absolute;
+        background: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -80px 0;
+        top: -10px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+.sweet-cupcake__ingredients-act-item-left-eggs{
+    &:before{
+        content: '';
+        position: absolute;
+        background: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -120px 0;
+        top: -10px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+.sweet-cupcake__ingredients-act-item-left-sugar{
+    &:before{
+        content: '';
+        position: absolute;
+        background: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -160px 0;
+        top: -10px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+.sweet-cupcake__ingredients-act-item-left-oil{
+    &:before{
+        content: '';
+        position: absolute;
+        background: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -200px 0;
+        top: -10px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+.sweet-cupcake__ingredients-act-item-left-milk{
+    &:before{
+        content: '';
+        position: absolute;
+        background: url('img/sweet-cupcake__ingredients-sprite.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -240px 0;
+        top: -10px;
+        left: -50px;
+        width: 40px;
+        height: 40px;
+    }
+}
+/////////////////////////
+.sweet-cupcake__inside-imgfirstwrap{
+    display: inline-block;
+    width: @cakeWidth;
+    min-height: @cakeHeight;
+    margin-right: 85px;
+    position: relative;
+    &:after{
+        content: '';
+        color: @black;
+        position: absolute;
+        bottom: -65px;
+        left: 0;
+        z-index: 1;
+        height: 65px;
+        width: @cakeWidth;
+        opacity: 0.4;
+        background: radial-gradient(450px 65px, rgba(0,0,0,0.12) 0%, rgba(0,0,0,0.08) 25%, rgba(0,0,0,0.05) 28%, rgba(0,0,0,0.04) 30%, rgba(0,0,0,0.03) 33%, rgba(0,0,0,0.02) 35%, transparent 40%, transparent 100%);
+    }
+}
+.sweet-cupcake__inside-imgwrap{
+    position: relative;
+    overflow: hidden;
+    width: @cakeWidth;
+    height: @cakeHeight;
+}
+.sweet-cupcake__img{
+    width: 100%;
+}
+.sweet-cupcake__desc{
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+}
+.sweet-cupcake__desc-head{
+    margin-bottom: 50px;
+}
+.sweet-cupcake__desc-title{
+    color: #fff;
+    // min-height: 150px;
+    .title-mixin;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sweet-cupcake__desc-title2{
+    padding-top: 60px;
+}
+.sweet-cupcake__desc-body{
+    color: #fff;
+    .desc-mixin;
+    margin-bottom: 50px;
+}
+.sweet-cupcake__desc-foot__left,
+.sweet-cupcake__desc-foot__right{
+    display:inline-block;
+}
+
+.sweet-cupcake__desc-price{
+    display:inline-block;
+    color: #fff;
+    font-family: @font;
+    .title-mixin;
+    margin-right: 130px;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        background-image: url('img/elements/rub.png');
+        background-repeat: no-repeat;
+         -moz-background-size: 100%; /* Firefox 3.6+ */
+        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+        -o-background-size: 100%; /* Opera 9.6+ */
+        background-size: 100%; /* Современные браузеры */
+        width: 80px;
+        height: 80px;
+        top: -6px;
+        right: -95px;
+    }
+}
+.sweet-cupcake__desc-foot__right{
+        vertical-align: top;
+        margin-top: 11px;
+}
+.sweet-cupcake__desc-link{
+        display:block;
+        text-decoration: none;
+}
+.sweet-cupcake__desc-button{
+    display:block;
+    padding: 20px 22px 20px 22px;
+    border-radius: 30px;
+    color: @red;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: @orange;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    z-index: 1;
+    &:hover{
+        color: @orange;
+        background-color: @brown;
+    }
+}

@@ -1,0 +1,27 @@
+// @import "vars";
+
+.title-mixin{
+	font-family: als_malinaregular;
+    font-size: 4.8rem;
+    font-weight: 100;
+    line-height: 70px;
+}
+.desc-mixin{
+	font-size: 1rem;
+    line-height: 20px;
+    // letter-spacing: 0.6px;
+	&>p{
+		overflow: hidden;
+		text-overflow: ellipsis;
+		&:hover{
+    	overflow: visible;
+    	}
+	}
+}
+.ingredients-mixin{
+	display: inline-block;
+    font-size: 1rem;
+    position: relative;
+    width: 180px;
+    color: darken(@black, 20%);
+}
