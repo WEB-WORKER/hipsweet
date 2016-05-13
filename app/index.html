@@ -2,12 +2,11 @@
 <!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ru-RU"> <!--<![endif]-->
 
-<html lang="ru-RU">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=990">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="fonts/fonts.css">
@@ -609,7 +608,7 @@
 				</div>
 			</section>
 
-			<section class="deliver">
+			<section class="deliver"  id="deliver">
 				<div class="container clearfix">
 					<h2 class="deliver__title">Мы поставляем</h2>
 					<div class="deliver__desc">
@@ -617,11 +616,11 @@
 					</div>
 					
 
-					<ul id="deliver" class="deliver__products">
+					<ul class="deliver__products" data-name="sweets">
 						<li class="deliver__item">
 							<div class="deliver__min-head ">
 								<div class="deliver__cake-wrap">
-									<img src="img/deliver/deliver-sprite.png" class="deliver__cake"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__cake" class="deliver__cake">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -633,7 +632,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__bisc-wrap">
-									<img src="img/deliver/deliver-sprite.png" class="deliver__bisc"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__bisc" class="deliver__bisc">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -645,7 +644,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__ponch-wrap">
-									<img src="img/deliver/deliver-sprite.png" class="deliver__ponch"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__ponch" class="deliver__ponch">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -657,7 +656,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__rul-wrap">
-									<img src="img/deliver/deliver-sprite.png"class="deliver__rul"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__rul" class="deliver__rul">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -669,7 +668,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__zef-wrap">
-									<img src="img/deliver/deliver-sprite.png"class="deliver__zef"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__zef" class="deliver__zef">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -681,7 +680,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__choc-wrap">
-									<img src="img/deliver/deliver-sprite.png"class="deliver__choc"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__choc" class="deliver__choc">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -693,7 +692,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__mincake-wrap">
-									<img src="img/deliver/deliver-sprite.png"class="deliver__mincake"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__mincake" class="deliver__mincake">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -705,7 +704,7 @@
 						<li class="deliver__item">
 							<div class="deliver__min-head">
 								<div class="deliver__candy-wrap">
-									<img src="img/deliver/deliver-sprite.png"class="deliver__candy"></img>
+									<img src="img/deliver/deliver-sprite.png" alt="deliver__candy" class="deliver__candy">
 								</div>
 							</div>
 							<div class="deliver__min-foot">
@@ -805,18 +804,18 @@
 									<div class="team__form-right clearfix">
 									  <div class="team__form-inside-wrap">
 									  	<div class="team__form-inside">
-									  			<form action method="POST" id="mail_send">
+									  			<form action="#" method="POST" id="mail_send">
 													<input type="text" class="team__form-input" placeholder="Введите ваше Имя" name="name">
 													<input type="text" class="team__form-input" placeholder="Введите ваш Email" name="mail">
 													<input id="phone" type="text" class="team__form-input team__form-phone" placeholder="8(___)___-__-__" name="phone">
-													<div class="team__form-check-left">
-														<input type="checkbox" class="team__form-check" checked>
-													</div>
-													<label for=""class="team__form-check-right">Заказать обратный звонок</label>
-													<button class="team__form-send" type="send">
-														<div class="team__form-send-arrow">
+													<label for="checkbox" class="team__form-check-label">
+														<input type="checkbox" class="team__form-check" id="checkbox" checked>
+														<span class="team__form-schbox"></span>
+													Заказать обратный звонок</label>
+													<button class="team__form-send" type="submit">
+														<span class="team__form-send-arrow">
 															
-														</div>
+														</span>
 													</button>
 												</form>
 											</div>
@@ -839,8 +838,8 @@
 							</div>
 							<div class="questions__desc-body">
 								<ul class="questions__desc-wrap">
-									<li class="questions__desc-item active">
-										<div class="questions__desc-minhead">Сколько по времени курьер доставляет заказ</div> 
+									<li class="questions__desc-item parent_active">
+										<div class="questions__desc-minhead active">Сколько по времени курьер доставляет заказ</div> 
 										<div class="questions__description">
 											<p>В античное время и средние века курьерами называли посыльных, конных гонцов, доставлявших секретную и дипломатическую почту. ”аковой, например, была введенная в Римской империи Августом государственная курьерская служба, называвшаяся cursus publicus.</p>
 											<p>В допетровской России рассыльные (гонцы) были служилыми людьми, «по прибору» и содержались за счет государственной казны. Особая курьерская почтовая служба была основана в 1701 году Петром I на Смоленском и Архангельском трактах для доставки чрезвычайных скорых посылок с царскими грамотами. Военных посыльных называют фельдъегерями, (начиная с середины XVIII века), а доставляющих дипломатическую почту — дипкурьерами.</p>
@@ -874,10 +873,9 @@
 				</div>
 			</section>
 			<section class="map">
-				<!-- <div class="container clearfix"> -->
 					<div id="map">
+						<h2 class="invisible__only-for-validation">Карта</h2>
 					</div>
-				<!-- </div> -->
 			</section>
 		
 		</div> <!-- /==== end main-content ===\ -->
@@ -926,10 +924,7 @@
 			</div>
 		</div>
 	</footer>
-	<!--scrollUP-->
-	<div id="scrollup">
-		<img src="img/up.png" class="up" alt="Прокрутить вверх" />
-	</div>	
+		
 	<!-- Google CDN jQuery with fallback to local -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

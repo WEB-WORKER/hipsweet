@@ -5,7 +5,7 @@
 
 .questions{
    min-height: 825px;
-   background: url(img/backgrounds/questions.svg);
+   background: url(img/questions/questions.png);
    background-size: cover;
 }
 .questions__back{
@@ -32,15 +32,14 @@
      margin-bottom: 40px;
      cursor: pointer;
 }
-.questions__desc-item.active{
+.parent_active{
       color: @orange;
-      &>.questions__desc-minhead{
-        color: @orange;
-        &:after{
-          content: '';
-          left: -9999px;
-        }
-      }
+}
+.questions__desc-minhead.active{
+    color: @orange;
+    &:after{
+      display:none;
+    }
 }
 .questions__desc-minhead{
   display: inline-block;
@@ -59,8 +58,10 @@
     width: 100%;
     background-repeat: repeat-x;
   }
+
 }
 .questions__description{
+    display: none;
     color: #fff;
     margin-left: 60px;
     width: 800px;

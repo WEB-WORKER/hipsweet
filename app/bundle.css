@@ -176,13 +176,17 @@ p {
 .top_nav__company-link,
 .top_nav__team-link {
   position: relative;
+  -moz-transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 
 .top_nav__sweets-link:after,
 .top_nav__team-link:after {
   content: '';
   position: absolute;
-  background-image: url("img/elements/down-arrow.png");
+  background-image: url("img/elements/down-arrow-x-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   top: 22%;
@@ -209,8 +213,9 @@ p {
 .top_nav__sweets-link:hover:after {
   content: '';
   position: absolute;
-  background-image: url("img/elements/x.png");
+  background-image: url("img/elements/down-arrow-x-sprite.png");
   background-repeat: no-repeat;
+  background-position: 0 -17px;
   background-size: cover;
   top: 22%;
   left: 85%;
@@ -298,8 +303,9 @@ p {
 .top_nav__team-link:hover:after {
   content: '';
   position: absolute;
-  background-image: url("img/elements/x.png");
+  background-image: url("img/elements/down-arrow-x-sprite.png");
   background-repeat: no-repeat;
+  background-position: 0 -17px;
   background-size: cover;
   top: 22%;
   left: 85%;
@@ -499,7 +505,7 @@ p {
 .sweet-cupcake__ingredients-circle:before {
   content: '';
   position: absolute;
-  background-image: url("img/sweet-cupcake__ingredients-sprite.png");
+  background-image: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 16px;
@@ -517,7 +523,7 @@ p {
 .sweet-cupcake__ingredients-circle:hover:before {
   content: '';
   position: absolute;
-  background-image: url("img/sweet-cupcake__ingredients-sprite.png");
+  background-image: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -42px 0;
@@ -628,7 +634,7 @@ p {
 .sweet-cupcake__ingredients-act-item-left-flour:before {
   content: '';
   position: absolute;
-  background: url("img/sweet-cupcake__ingredients-sprite.png");
+  background: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -80px 0;
@@ -641,7 +647,7 @@ p {
 .sweet-cupcake__ingredients-act-item-left-eggs:before {
   content: '';
   position: absolute;
-  background: url("img/sweet-cupcake__ingredients-sprite.png");
+  background: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -120px 0;
@@ -654,7 +660,7 @@ p {
 .sweet-cupcake__ingredients-act-item-left-sugar:before {
   content: '';
   position: absolute;
-  background: url("img/sweet-cupcake__ingredients-sprite.png");
+  background: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -160px 0;
@@ -667,7 +673,7 @@ p {
 .sweet-cupcake__ingredients-act-item-left-oil:before {
   content: '';
   position: absolute;
-  background: url("img/sweet-cupcake__ingredients-sprite.png");
+  background: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -200px 0;
@@ -680,7 +686,7 @@ p {
 .sweet-cupcake__ingredients-act-item-left-milk:before {
   content: '';
   position: absolute;
-  background: url("img/sweet-cupcake__ingredients-sprite.png");
+  background: url("img/elements/sweet-cupcake__ingredients-sprite.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: -240px 0;
@@ -844,11 +850,10 @@ p {
 .delicious__left {
   display: inline-block;
   vertical-align: middle;
-  padding: 230px 0 190px 50px;
+  padding: 230px 20px 190px 50px;
   line-height: 25px;
-  width: 700px;
+  width: 630px;
   min-height: 580px;
-  margin-right: 20px;
 }
 
 .delicious__desc-title {
@@ -884,11 +889,13 @@ p {
 
 .delicious__desc-col {
   display: inline-block;
-  width: 33.3%;
-  height: 150px;
+  vertical-align: top;
+  max-width: 30%;
+  margin-right: 20px;
 }
 
 .delicious__desc-circle {
+  display: inline-block;
   height: 107px;
   width: 107px;
   -moz-border-radius: 50%;
@@ -944,13 +951,16 @@ p {
   font-size: 1.5rem;
   font-weight: 100;
   color: rgba(116, 116, 116, 0.9);
+  width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .delicious__right {
   display: inline-block;
   vertical-align: bottom;
   height: 1000px;
-  width: 470px;
+  width: 550px;
   position: relative;
 }
 
@@ -969,7 +979,7 @@ p {
 
 .deliver {
   min-height: 1165px;
-  background-image: url("img/elements/pattern.jpg");
+  background-image: url("img/deliver/pattern.jpg");
   display: block;
   padding: 110px 0 170px 0;
 }
@@ -1015,6 +1025,7 @@ p {
 
 .deliver__item {
   display: inline-block;
+  vertical-align: top;
   width: 25%;
   font-size: 1rem;
   margin-bottom: 70px;
@@ -1400,6 +1411,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  display: block;
 }
 
 .team__form-wrap {
@@ -1491,6 +1503,7 @@ p {
 
 .team__form-phone {
   letter-spacing: 1.5px;
+  margin-bottom: 40px;
 }
 
 .team__form-input::-webkit-input-placeholder {
@@ -1520,28 +1533,70 @@ p {
   margin-top: 40px;
 }
 
-.team__form-check-left {
-  width: 10px;
-  font-size: 1.1rem;
-  padding-top: 5px;
-}
-
-.team__form-check-right {
+.team__form-check-label {
   font-size: 1.1rem;
   color: #fff;
-  max-width: 250px;
+  width: 250px;
+  cursor: pointer;
+  position: relative;
 }
 
 .team__form-check {
-  display: inline-block;
+  display: none;
   vertical-align: top;
   font-size: 1.1rem;
   color: #fff;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.team__form-check:checked + .team__form-schbox:before {
+  content: '';
+  display: none;
+  position: absolute;
+  background: url("img/elements/checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  top: -5px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.team__form-schbox {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  position: relative;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.team__form-schbox:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background: url("img/elements/checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -20px -17px;
+  top: -5px;
+  left: 0;
+  width: 50px;
+  height: 50px;
 }
 
 .questions {
   min-height: 825px;
-  background: url("img/backgrounds/questions.svg");
+  background: url("img/questions/questions.png");
   background-size: cover;
 }
 
@@ -1574,17 +1629,16 @@ p {
   cursor: pointer;
 }
 
-.questions__desc-item.active {
+.parent_active {
   color: #fca211;
 }
 
-.questions__desc-item.active > .questions__desc-minhead {
+.questions__desc-minhead.active {
   color: #fca211;
 }
 
-.questions__desc-item.active > .questions__desc-minhead:after {
-  content: '';
-  left: -9999px;
+.questions__desc-minhead.active:after {
+  display: none;
 }
 
 .questions__desc-minhead {
@@ -1608,6 +1662,7 @@ p {
 }
 
 .questions__description {
+  display: none;
   color: #fff;
   margin-left: 60px;
   width: 800px;
@@ -1635,6 +1690,10 @@ p {
 
 #map {
   height: 903px;
+}
+
+.invisible__only-for-validation {
+  display: none;
 }
 
 .footer__left {
@@ -1725,7 +1784,7 @@ p {
 }
 
 .socials__item:hover {
-  background: url("img/elements/sprite-socials-hover.png") no-repeat;
+  background: url("img/elements/sprite-socials.png") no-repeat;
 }
 
 .socials__fb {
@@ -1733,6 +1792,10 @@ p {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+}
+
+.socials__fb:hover {
+  background-position: 0 -35px;
 }
 
 .socials__inst {
@@ -1744,7 +1807,7 @@ p {
 }
 
 .socials__inst:hover {
-  background-position: -50px 0;
+  background-position: -50px -35px;
 }
 
 .socials__ok {
@@ -1756,7 +1819,7 @@ p {
 }
 
 .socials__ok:hover {
-  background-position: -120px 0;
+  background-position: -120px -35px;
 }
 
 .socials__tw {
@@ -1768,7 +1831,7 @@ p {
 }
 
 .socials__tw:hover {
-  background-position: -190px 0;
+  background-position: -190px -35px;
 }
 
 .socials__vk {
@@ -1780,7 +1843,7 @@ p {
 }
 
 .socials__vk:hover {
-  background-position: -250px 0;
+  background-position: -250px -35px;
 }
 
 html,
@@ -2240,25 +2303,6 @@ table {
 td,
 th {
   padding: 0;
-}
-#scrollup {
-  position: fixed;
-  /* фиксированная позиция */
-  opacity: 0.3;
-  /* прозрачность */
-  /*padding: 15px 10px 10px; */
-  background: #6cc9f9;
-  border-radius: 5px;
-  /* скругление углов */
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  left: 10px;
-  /* отступ слева */
-  bottom: 10px;
-  /* отступ снизу */
-  display: none;
-  /* спрятать блок */
-  cursor: pointer;
 }
 /* Slider */
 
